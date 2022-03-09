@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -51,5 +53,10 @@ public class EmployeeService {
         System.out.println("student = " + student);
         List<Employee> employees = employeeRepo.findAll();
         return employees;
+    }
+
+    public Page<Employee> paginageRecords(Pageable pageable) {
+        Page<Employee> all = employeeRepo.findAll(pageable);
+        return all;
     }
 }

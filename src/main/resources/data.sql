@@ -1,0 +1,10 @@
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Jack', 'Sam' , 25000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Rohit', 'Sharma' , 26000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Vikash', 'Singh' , 27000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Rahul', 'Gupta' , 28000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Alex', 'warne' , 29000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Kylie', 'godfrey' , 31000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Mehak', 'singhal' , 32000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Aakshi', 'patial' , 33000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Nisa', 'dubey' , 34000);
+INSERT INTO tst.employee ( first_name, last_name,salary ) VALUES ( 'Syed', 'Hussain' , 35000);
