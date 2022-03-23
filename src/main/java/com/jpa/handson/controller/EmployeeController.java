@@ -20,31 +20,31 @@ public class EmployeeController {
 
     EmployeeService employeeService;
 
-    @PostMapping("/addEmployee")
+    @PostMapping("/employee")
     public Employee addEmployee(@RequestBody Employee employee) {
         System.out.println("employee = " + employee);
         return employeeService.persistEmployee(employee);
 
     }
 
-    @GetMapping("/getEmployee/{id}")
+    @GetMapping("/employee/{id}")
     public Employee getEmployee(@PathVariable Long id) {
         return employeeService.fetchEmployee(id);
 
     }
 
-    @GetMapping("/getAllEmployee")
+    @GetMapping("/employee")
     public List<Employee> getAllEmployee() {
         return employeeService.getAllEmployee();
     }
 
-    @PutMapping("/updateEmployee")
+    @PutMapping("/employee")
     public Employee removeEmployee(@RequestBody Employee employee) {
         Employee employeeUpd = employeeService.updateEmployee(employee.getId(), employee);
         return employeeUpd;
     }
 
-    @DeleteMapping("/removeEmployee/{id}")
+    @DeleteMapping("/employee/{id}")
     public String removeEmployee(@PathVariable Long id) {
         employeeService.deleteEmployee(id);
         return "Delete Success";
