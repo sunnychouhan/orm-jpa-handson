@@ -8,8 +8,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +24,7 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @PostMapping("/employee")
-    public Employee addEmployee(@RequestBody Employee employee) {
+    public Employee addEmployee(@Valid @RequestBody Employee employee, BindingResult bindingResult) {
         System.out.println("employee = " + employee);
         return employeeService.persistEmployee(employee);
 
