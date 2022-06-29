@@ -14,7 +14,6 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-@Table(name = "department")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Department {
 
